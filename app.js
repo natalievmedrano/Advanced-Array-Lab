@@ -177,16 +177,42 @@ function italianFood(){
 }
 
 let italianCuisine = italianFood();
-console.log('Italian Dishes that feeds more than 5 are: ', italianCuisine);
+console.log('Italian Dishes with 5 servings: ', italianCuisine);
 
 
 //4. Create a function that will return only dishes whose id number matches their serving count.
 //Filter
 
+function idServing(){
+	let results = dishes.filter(function(el) {
+		if(el.id === el.servings) {
+			return true;
+		} else {
+			return false;
+		}
+	})
+	return results;
+}
+let countequalId = idServing();
+console.log('dishes have matching ids and serving sizes: ', countequalId)
+
 
 
 //5. Create a function that will return only dishes whose serving count is even.
 //Filter
+
+function evenServings(){
+	let results = dishes.filter(function(el) {
+		if(el.servings % 2 == 0) {
+			return true;
+		} else {
+			return false;
+		}
+	})
+	return results
+}
+let servingCount= evenServings();
+console.log('dishes that has an even serving count: ', servingCount);
 
 
 
