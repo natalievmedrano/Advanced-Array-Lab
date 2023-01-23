@@ -194,7 +194,7 @@ function idServing(){
 	return results;
 }
 let countequalId = idServing();
-console.log('dishes have matching ids and serving sizes: ', countequalId)
+console.log('dishes that have matching ids and serving sizes: ', countequalId)
 
 
 
@@ -212,7 +212,7 @@ function evenServings(){
 	return results
 }
 let servingCount= evenServings();
-console.log('dishes that has an even serving count: ', servingCount);
+console.log('dishes that have an even serving count: ', servingCount);
 
 
 
@@ -232,7 +232,7 @@ function chickpeaDish() {
 	return results
 }
 let chickPea = chickpeaDish();
-console.log('dishes that includes chickpea: ', chickPea)
+console.log('dishes that include chickpea: ', chickPea)
 
 
 
@@ -243,6 +243,15 @@ console.log('dishes that includes chickpea: ', chickPea)
 
 //8a. Create a function that will return an array of the string cuisine types. Ie, ["Italian", "Italian", "Mexican", ...]
 //Map
+function cuisineType(){
+	let results = dishes.map(function(el) {
+		return el.cuisine;
+	})
+	return results;
+}
+
+let cuisineName = cuisineType();
+console.log('dishes and their cuisine type: ', cuisineName);
 
 
 
