@@ -251,7 +251,7 @@ function problemEight(){
 }
 
 let cuisineType = problemEight();
-console.log('dishes and their cuisine type: ', cuisineType);
+console.log('cuisine type: ', cuisineType);
 
 
 
@@ -259,7 +259,7 @@ console.log('dishes and their cuisine type: ', cuisineType);
 //Map 
 function problemNine(){
     let results = dishes.map(function(el){
-        return el.cuisine +''+ el.name;
+        return el.cuisine +' '+ el.name;
     })
     return results;
 }
@@ -270,7 +270,16 @@ console.log('Cuisine Type with appended name:', appendDish)
 
 //10. Create a function that will use advanced array methods on the 'dishes' array and return the result ["Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"]
 
-
+function problemTen(){
+    let results = dishes.filter(function(el){
+        return el.cuisine === 'Vegetarian';
+    }).map(function(el){
+        return el.cuisine + ' '+ el.name;
+    })
+    return results;
+}
+let advancedarrayDish = problemTen();
+console.log('Advanced array method on dishes array:', advancedarrayDish)
 
 
 
