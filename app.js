@@ -257,6 +257,14 @@ console.log('dishes and their cuisine type: ', cuisineType);
 
 //9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name. Ie, ["Italian Pizza", "Italian Spaghetti", ...]
 //Map 
+function problemNine(){
+    let results = dishes.map(function(el){
+        return el.cuisine +''+ el.name;
+    })
+    return results;
+}
+let appendDish = problemNine();
+console.log('Cuisine Type with appended name:', appendDish)
 
 
 
